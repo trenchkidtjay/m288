@@ -1,46 +1,58 @@
-body {
-    background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
-    text-align: center;
-}
+/* CSS */
 
-#board {
-    display: grid;
-    grid-template-columns: repeat(3, 100px);
-    grid-template-rows: repeat(3, 100px);
-    gap: 2px;
-    width: 306px;
-    margin: 0 auto;
-    background-color: #fff;
-    border: 2px solid #000;
-}
-
+/* Styling for each cell of the Tic Tac Toe grid */
 .cell {
     width: 100px;
     height: 100px;
-    border: 1px solid black;
-    font-size: 3em;
+    border: 2px solid white;
+    font-size: 0; 
+    cursor: pointer;
+    background-size: cover;
+}
+
+/* Styling for the game container */
+#gameContainer {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    background-color: black;
+    min-height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Disable scrolling */
+    background-size: cover; /* Set background image to cover */
 }
 
-#status {
-    margin-top: 10px;
-    font-size: 1.5em;
+/* Styling for the grid layout of the cells */
+#cellContainer {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: 300px;
+    margin: auto;
 }
 
-button {
-    padding: 10px 20px;
-    font-size: 1em;
-    background-color: #4CAF50;
+/* Style for the status text */
+#statusText {
+    margin-top: 10px; /* Reduce margin */
+    margin-bottom: 20px; /* Reduce margin */
+    color: white;
+}
+
+/* Style for the restart button */
+#Restart {
+    margin-bottom: 50px;
+    background-color: red;
     color: white;
     border: none;
+    padding: 10px 20px;
     cursor: pointer;
-    border-radius: 5px;
 }
 
-button:hover {
-    background-color: #45a049;
+/* Style for the title */
+h1 {
+    color: white;
+    margin: 10px 0;
 }
